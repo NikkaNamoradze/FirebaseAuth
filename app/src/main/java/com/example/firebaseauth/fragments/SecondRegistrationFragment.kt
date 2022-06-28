@@ -30,11 +30,6 @@ class SecondRegistrationFragment : Fragment(R.layout.register_second_page) {
         listeners()
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
-    }
-
     private fun listeners() {
 
         binding.back.setOnClickListener {
@@ -70,6 +65,11 @@ class SecondRegistrationFragment : Fragment(R.layout.register_second_page) {
 
 
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 
 }

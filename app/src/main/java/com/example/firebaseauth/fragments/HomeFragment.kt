@@ -28,11 +28,6 @@ class HomeFragment: Fragment(R.layout.home_page) {
         listeners()
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
-    }
-
     private fun listeners(){
 
         binding.btnRegister.setOnClickListener {
@@ -45,5 +40,9 @@ class HomeFragment: Fragment(R.layout.home_page) {
 
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 }
 

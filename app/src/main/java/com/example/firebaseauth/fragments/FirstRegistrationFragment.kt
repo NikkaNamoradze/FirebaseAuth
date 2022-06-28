@@ -29,10 +29,6 @@ class FirstRegistrationFragment: Fragment(R.layout.register_first_page) {
         listeners()
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
-    }
 
     private fun listeners(){
         binding.back.setOnClickListener {
@@ -58,6 +54,11 @@ class FirstRegistrationFragment: Fragment(R.layout.register_first_page) {
             findNavController().navigate(FirstRegistrationFragmentDirections.actionFirstRegistrationFragmentToSecondRegistrationFragment(email,password))
         }
 
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 
 }

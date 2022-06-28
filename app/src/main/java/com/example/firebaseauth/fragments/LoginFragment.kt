@@ -31,11 +31,6 @@ class LoginFragment : Fragment(R.layout.log_in_page) {
         listeners()
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
-    }
-
     private fun listeners() {
 
         binding.back.setOnClickListener {
@@ -68,6 +63,11 @@ class LoginFragment : Fragment(R.layout.log_in_page) {
                 }
             }
 
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 
 }
