@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FirebaseAuth</string>
+    <string name="log_in">Log in</string>
+    <string name="register">Register</string>
+    <string name="author">\@n_namoradze</string>
+    <string name="photo">photo</string>
+    <string name="privacy_policy">By signing up, you agree to Photo’s Terms of Service and Privacy Policy.</string>
+    <string name="password">password</string>
+    <string name="e_mail">e-mail</string>
+    <string name="username">Username</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="next">next</string>
+</resources>

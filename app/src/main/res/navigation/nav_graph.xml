@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.firebaseauth.fragments.HomeFragment"
+        tools:layout="@layout/home_page"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_firstRegistrationFragment"
+            app:destination="@id/firstRegistrationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstRegistrationFragment"
+        tools:layout="@layout/register_first_page"
+        android:name="com.example.firebaseauth.fragments.FirstRegistrationFragment"
+        android:label="FirstRegistrationFragment" >
+        <action
+            android:id="@+id/action_firstRegistrationFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_firstRegistrationFragment_to_secondRegistrationFragment"
+            app:destination="@id/secondRegistrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        tools:layout="@layout/log_in_page"
+        android:name="com.example.firebaseauth.fragments.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondRegistrationFragment"
+        tools:layout="@layout/register_second_page"
+        android:name="com.example.firebaseauth.fragments.SecondRegistrationFragment"
+        android:label="SecondRegistrationFragment" >
+        <action
+            android:id="@+id/action_secondRegistrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/secondRegistrationFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_secondRegistrationFragment_to_firstRegistrationFragment"
+            app:destination="@id/firstRegistrationFragment" />
+        <argument
+            android:name="user_email"
+            app:argType="string" />
+        <argument
+            android:name="user_password"
+            app:argType="string" />
+    </fragment>
+</navigation>
